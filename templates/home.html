@@ -1,0 +1,84 @@
+<!-- <html>
+    <body bgcolor=#d4a3ae>
+
+        <center>
+
+        <h1> IRIS FLOWER DETECTION </h1><br>
+        
+        <form method="POST", action="{{url_for('home')}}">
+           <b> First value :  <input type="text", name='a', placeholder="enter 1"> <br><br>
+            Second value :  <input type="text", name='b', placeholder="enter 2"> <br><br>
+            Third value :  <input type="text", name='c', placeholder="enter 3"> <br><br>
+            Fourth value : <input type="text", name='d', placeholder="enter 4"> <br><br><br></b>
+            <input type="submit" , value='predict!' >
+        </form>
+
+        <img src='static\all.png' alt="flower" width="500" height="200">
+        
+    </center>
+
+    </body>
+</html> -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Iris Flower Detection</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">Iris Flower Detection</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+              </li>
+            </ul>  
+            </form>
+          </div>
+        </div>
+      </nav>
+    <div class="container my-5">
+
+        <h1>Iris Flower Detection</h1>
+        <div class="mb-3">
+            <form action="{{url_for('home')}}" method="post">
+                
+                <label for="a" class="form-label">Sepal Length</label>
+                <input type="text" class="form-control" id="a" name="a" placeholder="Enter the Sepal length" required>
+            </div>
+            <div class="mb-3">
+                <label for="b" class="form-label">Sepal Width:</label>
+                <input type="text" class="form-control" id="b" name="b" placeholder="Enter the Sepal width" required>
+                
+            </div>
+            <div class="mb-3">
+                <label for="c" class="form-label">Petal Length:</label>
+                <input type="text" class="form-control" id="c" name="c" placeholder="Enter the petal Length" required>
+                
+            </div>
+            <div class="mb-3">
+                <label for="d" class="form-label">Petal Width:</label>
+                <input type="text" class="form-control" id="d" name="d" placeholder="Enter the petal width" required>
+                
+            </div>
+            <div class="d-grid gap-2">
+
+                <button type="submit" class="btn btn-success"><b>Predict</b></button>
+            </div>
+        </form>
+        <br>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  </body>
+</html>
