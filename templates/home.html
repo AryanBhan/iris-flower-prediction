@@ -1,25 +1,3 @@
-<!-- <html>
-    <body bgcolor=#d4a3ae>
-
-        <center>
-
-        <h1> IRIS FLOWER DETECTION </h1><br>
-        
-        <form method="POST", action="{{url_for('home')}}">
-           <b> First value :  <input type="text", name='a', placeholder="enter 1"> <br><br>
-            Second value :  <input type="text", name='b', placeholder="enter 2"> <br><br>
-            Third value :  <input type="text", name='c', placeholder="enter 3"> <br><br>
-            Fourth value : <input type="text", name='d', placeholder="enter 4"> <br><br><br></b>
-            <input type="submit" , value='predict!' >
-        </form>
-
-        <img src='static\all.png' alt="flower" width="500" height="200">
-        
-    </center>
-
-    </body>
-</html> -->
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -55,21 +33,21 @@
             <form action="{{url_for('home')}}" method="post">
                 
                 <label for="a" class="form-label">Sepal Length</label>
-                <input type="text" class="form-control" id="a" name="a" placeholder="Enter the Sepal length" required>
+                <input type="number"  min="4.3" max="7.9" value="4.3" step=".01" class="form-control" id="a" name="a" placeholder="Enter the Sepal length" required>
             </div>
             <div class="mb-3">
                 <label for="b" class="form-label">Sepal Width:</label>
-                <input type="text" class="form-control" id="b" name="b" placeholder="Enter the Sepal width" required>
+                <input type="number"  min="2" max="4.4" value="2" step=".01" class="form-control" id="b" name="b" placeholder="Enter the Sepal width" required>
                 
             </div>
             <div class="mb-3">
                 <label for="c" class="form-label">Petal Length:</label>
-                <input type="text" class="form-control" id="c" name="c" placeholder="Enter the petal Length" required>
+                <input type="number"  min="1" max="6.9" value="1" step=".01" class="form-control" id="c" name="c" placeholder="Enter the petal Length" required>
                 
             </div>
             <div class="mb-3">
                 <label for="d" class="form-label">Petal Width:</label>
-                <input type="text" class="form-control" id="d" name="d" placeholder="Enter the petal width" required>
+                <input type="number"  min=".01" value=".01" max="2.5" step=".01" class="form-control" id="d" name="d" placeholder="Enter the petal width" required>
                 
             </div>
             <div class="d-grid gap-2">
@@ -79,6 +57,7 @@
         </form>
         <br>
     </div>
+    <div style="text-align: center;">Made with ❤ by Aryan Bhan</div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
   </body>
 </html>

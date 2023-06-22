@@ -1,12 +1,11 @@
 from flask import Flask, render_template, request,redirect
-import pickle
+import pickle,os
 import numpy as np
 
 model = pickle.load(open('iri.pkl', 'rb'))
-
 app = Flask(__name__)
-
-
+env_config = os.getenv("PROD_APP_SETTINGS", "config.DevelopmentConfig")
+app.config.from_object(env_config)
 
 @app.route('/')
 def man():
@@ -14,7 +13,6 @@ def man():
 @app.route('/about')
 def about():
     return render_template('about.html')
-
 
 
 @app.route('/predict', methods=['POST'])
@@ -31,7 +29,7 @@ def home():
         return redirect('/')
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
     
 
 
