@@ -4,7 +4,7 @@ import numpy as np
 
 model = pickle.load(open('iri.pkl', 'rb'))
 app = Flask(__name__)
-env_config = os.getenv("PROD_APP_SETTINGS", "config.DevelopmentConfig")
+env_config = os.getenv("PROD_APP_SETTINGS", "config.0")
 app.config.from_object(env_config)
 
 @app.route('/')
