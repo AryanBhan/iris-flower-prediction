@@ -1,11 +1,8 @@
 from flask import Flask, render_template, request,redirect
 import pickle,os
 import numpy as np
-
 model = pickle.load(open('iri.pkl', 'rb'))
 app = Flask(__name__)
-env_config = os.getenv("PROD_APP_SETTINGS", "config.0")
-app.config.from_object(env_config)
 
 @app.route('/')
 def man():
